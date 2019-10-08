@@ -19,7 +19,7 @@ public class Person extends BaseEntity {
     @Column(name = "last_name", length = 64, nullable = false)
     private String lastName;
 
-    @Column(name = "document_number", nullable = false)
+    @Column(name = "document_number", nullable = false, unique = true)
     private Long nuip;
 
     @Column(name = "birth_date",nullable = false)

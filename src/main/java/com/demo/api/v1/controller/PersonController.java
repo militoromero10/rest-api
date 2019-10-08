@@ -36,16 +36,16 @@ public class PersonController {
         return personService.createPerson(personDTO);
     }
 
-    @PutMapping({"/{id}"})
+    @PutMapping
     @ResponseStatus(HttpStatus.OK)
-    public PersonDTO updatePerson(/*@PathVariable Long id,*/ @RequestBody PersonDTO personDTO){
-        return personService.updatePerson(/*id, */personDTO);
+    public PersonDTO updatePerson(@RequestBody PersonDTO personDTO){
+        return personService.updatePerson(personDTO);
     }
 
-    @PatchMapping({"/{id}"})
+    @PatchMapping
     @ResponseStatus(HttpStatus.OK)
-    public PersonDTO patchPerson(/*@PathVariable Long id,*/ @RequestBody PersonDTO personDTO){
-        return personService.patchPerson(/*id, */personDTO);
+    public PersonDTO patchPerson(@RequestBody PersonDTO personDTO){
+        return personService.patchPerson(personDTO);
     }
 
     @DeleteMapping({"/{id}"})
